@@ -57,5 +57,5 @@ console.log(flatarray);
 console.log(flatalllevelsarray);
 
 console.log(Array.isArray("abc")); // false
-console.log(Array.from("abc")); // expects string, map etc.
-console.log(Array.of("abc","def")); // of expects , separated list of values
+console.log(Array.from("abc")); // expects string, map etc. o/p: [a,b,c]
+console.log(Array.of("abc","def")); // of expects , separated list of values. o/p: [abc, def]
