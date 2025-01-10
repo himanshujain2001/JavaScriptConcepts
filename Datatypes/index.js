@@ -28,4 +28,4 @@ const ids1 = Symbol('12')
 console.log(ids === ids1); // false
 
 // Non-Primitive(Call by reference) - Array, Objects, Functions
-// -> Return type of non-primitive data types is "object"
+// -> type of non-primitive data types is "object"

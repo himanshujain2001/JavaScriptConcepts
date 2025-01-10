@@ -28,6 +28,7 @@ let ids = undefined
 console.log(typeof ids); // undefined
 
 let idValue = Number(ids)
+console.log(typeof idValue); // number
 console.log(idValue); // NaN
 
 
