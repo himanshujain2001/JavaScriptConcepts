@@ -45,8 +45,8 @@ console.log(arr6); // poori arr7 poori as a single ele and as a array hi add ho 
 const newarray = arr6.concat(arr7) // concat ek new array return krega aur ele's ko individually add krega
 console.log(newarray); // [1,2,3,4,2,3,4]
 
-const anothermethodofconcatarray = [...arr6, ...arr7] // [1,2,3,4,2,3,4] -> same o/p as concat but isme apan multiple arrays ko concat
-// kr skte h
+const anothermethodofconcatarray = [...arr6, ...arr7] // [1,2,3,4,2,3,4] -> this is k/w
+// as spread operator. same o/p as concat but isme apan multiple arrays ko concat kr skte h
 console.log(anothermethodofconcatarray);
 
 const nestedarray = [1,2,3,[2,3,4],5,6, ,[4,5,6,7,[5,7]]]
