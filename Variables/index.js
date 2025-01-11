@@ -9,5 +9,5 @@ email = "abc@gmail.com" // can be done
 let state; // output: undefined
 
 /*
-  Note: don't use var because of issue of block scope and functional scope
+  Note: don't use var because of issue of block scope and functional scope and var vaale variable ko apan dubaara declare bhi kr skte h
 */

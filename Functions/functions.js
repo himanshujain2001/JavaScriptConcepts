@@ -73,3 +73,31 @@ const func3 = (anyobject) => {
 console.log(func3(user));
 console.log(func3(user1)); // Username: abc and Password: undefined
 console.log(func3("abc")); // dono undefined aayenge
+
+// This doesn't throw any error
+add(1,2)
+
+function add(num1,num2){
+    return num1+num2;
+}
+
+// This will throw error saying that "Cannot access subtract before initialization"
+// subtract(3,2)
+
+const subtract = function (num1,num2){
+    return num1-num2;
+}
+
+
+// Arrow Functions
+
+const addTwo = (num1, num2) => num1+num2 // this syntax k/w as implicit return where we fon't need to specify 'return' keyword and there will be
+// only 1 statement
+
+const addTwoNumbers = (num1, num2) => ( num1+num2 ) // this is also same -> Usecase: suppose we need to return an object. Below example.
+
+const objFunc = () => {return {name: "abc"}} // shi chalega i.e. object aayega
+const objFunc1 = () => ({name: "abc"}) // object aayega
+const objFunc2 = () => {{name: "abc"}} // undefined aayega
+
+console.log(objFunc());
