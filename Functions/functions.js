@@ -27,10 +27,10 @@ const funcOutput1 = (name) => {
     return `${name} logged in`
 }
 
-console.log(funcOutput1()); // Please enter name followed by undefined
+console.log(funcOutput1()); // Please enter name followed by undefined (undefined isiliye kyu ki functn by default undefined return krega na)
 console.log(funcOutput1("")); // Please enter name followed by undefined
 
-// We can also defined default params in JavaScript so that if we don't pass anything then it will take that value and if we pass value then it
+// We can also define default params in JavaScript so that if we don't pass anything then it will take that value and if we pass value then it
 // will override
 
 const funcOutput2 = (name = "abc") => {
@@ -91,7 +91,7 @@ const subtract = function (num1,num2){
 
 // Arrow Functions
 
-const addTwo = (num1, num2) => num1+num2 // this syntax k/w as implicit return where we fon't need to specify 'return' keyword and there will be
+const addTwo = (num1, num2) => num1+num2 // this syntax k/w as implicit return where we don't need to specify 'return' keyword and there will be
 // only 1 statement
 
 const addTwoNumbers = (num1, num2) => ( num1+num2 ) // this is also same -> Usecase: suppose we need to return an object. Below example.
@@ -99,5 +99,6 @@ const addTwoNumbers = (num1, num2) => ( num1+num2 ) // this is also same -> Usec
 const objFunc = () => {return {name: "abc"}} // shi chalega i.e. object aayega
 const objFunc1 = () => ({name: "abc"}) // object aayega
 const objFunc2 = () => {{name: "abc"}} // undefined aayega
+const objFunc3 = () => {name: "abc"} // undefined aayega
 
 console.log(objFunc());

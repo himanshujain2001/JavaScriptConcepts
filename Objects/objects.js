@@ -1,7 +1,7 @@
 const mySym = Symbol('key1')
 
 // symbol ko [] k saath likhenge tabhi vo symbol ki tarah treat hoga
-// object m jaise name, age vagerah ye likhe h to internall object inko "name", "age" means string hi leta h
+// object m jaise name, age vagerah ye likhe h to internally object inko "name", "age" means string hi leta h
 
 // object declaration using literal syntax:
 const obj = {
@@ -29,10 +29,11 @@ obj.greeting = () => {
 }
 
 obj.anotherGreeting = () => {
-    console.log(`This is a function, ${this.name}`); // this jaroori h to store the address of current obj, direct name nhi likh skte 
+    console.log(`This is a function, ${this.name}`); // this jaroori h to store the address of current contaxt, direct name nhi likh skte 
 }
+
 const anotherGreeting = () => {
-    console.log(`This is a function, ${this.name}`); // isme undefined dega 'this.name' value because kaunse obj ko ref krna h vo pta hi nhi h
+    console.log(`This is a function, ${this.name}`); // isme undefined dega 'this.name' value because kaunse obj ko ref maan na h vo pta hi nhi h
 }
 
 console.log(obj.greeting); // print function defination itself
@@ -78,7 +79,7 @@ const obj3 = {
 
 const obj4 = {obj1, obj2, obj3} // isme in saare obj's ko as it is utha k copy kr dega
 
-//const obj4 = Object.assign({}, obj1, obj2, obj3) // {} is an optional param and it's destination obj means obj1, obj2, obj3 are source
+// const obj4 = Object.assign({}, obj1, obj2, obj3) // {} is an optional param and it's destination obj means obj1, obj2, obj3 are source
 console.log(obj4);
 console.log(obj1);
 

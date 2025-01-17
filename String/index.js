@@ -8,7 +8,7 @@ console.log(name + count + username + " Password");
 console.log(`This is a modern way to concatenate string: ${name} ${count} ${username} Password`);
 console.log(name[0]);
 console.log(name.length);
-console.log(name.__proto__);
+console.log(name.__proto__); // {}
 console.log(typeof name); // string
 console.log(name.toUpperCase());
 console.log(name); // abc
@@ -19,6 +19,7 @@ console.log(user[0]); // a
 console.log(typeof user); // object
 console.log(user.substring(0,3)); // abc
 console.log(user.slice(0,3)); // abc
+console.log(user); // [String: 'abcd']
 console.log(user.slice(-4,-2)); // ab (-ve indexing m d=-1, c=-2, b=-3 and so on. To is case m 'a' se chaalu krega aur 'b' pe rok dega kyu ki -2 
 // vaala include nhi hoga)
 console.log(user.trim()); // remove extra spaces from front as well as end
@@ -46,7 +47,7 @@ console.log(Math.round(3.7)); //4
 console.log(Math.ceil(3.1)); //4 (ceil mtlb top)
 console.log(Math.floor(3.7)); //3 (floor mtlb down)
 console.log(Math.random()); // 0 se 1 k beech m decimal values return krta h
-console.log((Math.random()*10) + 1); // value will be always > 1
+console.log((Math.random()*10) + 1); // value will be always > 1 but can be decimal
 console.log(Math.floor(Math.random()*10) + 1); // Number value aayegi and > 1 aayegi, decimal nhi aayegi
 
 const min = 1

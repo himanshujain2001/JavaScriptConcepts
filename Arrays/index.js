@@ -1,5 +1,7 @@
 const arr = [1,2,3,4,5,'a',true]
 const arr1 = new Array(1,2,4,4,6)
+console.log(typeof arr1); // object
+
 const arr2 = arr // since array non-primitive h to ref copy honge to kisi ek array m change krenge to doosri m bhi change ho jaayenge. This is
 // k/w as shallow copy
 
