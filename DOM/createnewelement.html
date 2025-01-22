@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Element in DOM</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // let's create a div as new element
+    const newCustomElement = document.createElement('div')
+    console.log(newCustomElement); // o/p: <div></div>
+    newCustomElement.className = 'custom-div'
+    newCustomElement.id = 'custom-element'
+    newCustomElement.setAttribute("customattribute", "abcd") // custom attribute bhi add kr skte h. Key - Value ki form m
+    newCustomElement.style.backgroundColor = 'yellow'
+    // newCustomElement.innerText = "This is a new custom element"
+                                // OR
+    // const text = document.createTextNode("This is a new custom element")
+    // newCustomElement.appendChild(text)
+    // document.body.appendChild(newCustomElement)
+
+    // document.body.append(newCustomElement, "This is a new custom element") // on the page it will display the text but this text will not be
+         // added to the custom element instead it's directly added to the body. While in appendChild() first text node is created and then added to
+         // the custom element and then in the body
+
+
+////// Note: It's not recommended to use innerText approach instead use creation of text node and then append it to element as it's optimized
+          // because innerText vagerah m poora tree traverse hota h 
+
+</script>
+</html>

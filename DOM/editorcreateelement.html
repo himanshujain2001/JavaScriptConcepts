@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit or create element in DOM</title>
+</head>
+<body>
+    <ul class="languageholder">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+
+    function addNewLanguage(language){
+        const newElement = document.createElement('li')
+        newElement.appendChild(document.createTextNode(`${language}`))
+        document.querySelector('.languageholder').appendChild(newElement) // isko body m append nhi kiya because ul m append krna h na ki poore page
+        // m khi bhi mtlb apan ko ye thodi chalega ki poore page m khi bhi aa jaaye
+    }
+    addNewLanguage('C++')
+    addNewLanguage('Java')
+
+
+    // Edit: 
+    const editLanguageReference = document.querySelector("li:nth-child(3)")
+    const replaceElement = document.createElement('li')
+    replaceElement.textContent = "Next.js"
+    editLanguageReference.replaceWith(replaceElement)
+
+
+    // Remove: 
+    // ref pakad k remove() method use kr lo
+    
+</script>
+</html>
