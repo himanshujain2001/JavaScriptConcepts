@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in JavaScript</title>
+</head>
+<body>
+    <h2>Events</h2>
+    <div>
+        <ul id="images">
+            <li><img src="https://www.savoryandsweetfood.com/wp-content/uploads/2015/01/img_6085.jpg" id="gulabjamun" alt="Gulab Jamun"
+                height="200px" width="200px">
+            </li>
+            <li><img src="https://www.archanaskitchen.com/images/archanaskitchen/1-Author/moumita.malla-gmail.com/traditional_rasmalai_recipe.jpg" 
+                id="rasmalai" alt="Ras Malai" height="200px" width="200px">
+            </li>
+            <li><a href="https://www.google.com">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+
+// addEventListener m 3rd parameter event propagation ka hota h jo ki agar apan mention bhi nhi kre to by default 'false' hi hota h. Aur ye jab
+// false hota h to event bubbling hoti h mtlb andar se baahar ki taraf and true hota h to event capturing hoti h mtlb baahar se andar ki taraf.
+    
+    // document.getElementById('images').addEventListener('click', (e) => {
+    //     console.log('ul clicked!');
+        
+    // }, false)
+
+    // document.getElementById('gulabjamun').addEventListener('click', (e) => {
+    //     console.log('Gulab Jamun');
+    //     // e.stopPropagation() // it will stop propagation(bubbling, capturing)
+    // }, false)
+
+    document.querySelector('#images').addEventListener('click', (e) => {
+        console.log(e.target);
+        console.log(e.target.parentNode); // target ele ka parent ele aa jaayega
+        console.log(e.target.tagName); // target ele ka tag name aa jaayega jaise ki LI, IMG
+
+        // apan ko ye krna h ki jaise hi apan image pe click kre to image gaayab ho jaaye mtlb vo particualr li item remove ho jaaye to apan ko
+        // ye check krna pdega ki jha se event aa rha h vo image h ya nhi kyu ki agar event jha se aaya hoga agar vo kuch aur hoga to uska parent
+        // remove hoga na phir jabki apan ko image ka parent remove krna h
+       
+        if(e.target.tagName === 'IMG'){
+            const removeElement = e.target.parentNode;
+            removeElement.remove()
+        }
+        
+    })
+
+/* 
+    Note: 
+       -> e.target m vo ele aayega jispe vo event hua h mtlb jha se vo event utha h
+       -> jaise ye h: 
+
+           <ul>
+            <li></li>
+           </ul>
+
+        to inme ul, li dono pe event listener laga hua h jaise to jab li pe action perform krenge to phle li vaala event trigger hota aur phir
+        ul vaala. This is k/w as event bubbling. And ul vaala isiliye trigger hoga kyu ki li ul m nested h to uspe actn hona mtlb dono pe actn hona
+        -> e.preventDefault() => to stop default behaviour
+*/
+
+</script>
+</html>
