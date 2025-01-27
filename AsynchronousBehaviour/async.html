@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Concepts</title>
+</head>
+<body>
+    <h1 class="heading">Understanding about Asynchronous behaviour in JavaScript</h1>
+    <p class="para">JavaScript basically uses event loop concept to achieve this behaviour</p>
+    <button class="stopbutton">Stop Async</button>
+    <button class="startinterval">Start Interval</button>
+    <button class="stopinterval">Stop Interval</button>
+</body>
+<script>
+
+    ////// setTimeout() => iska use jaise koi bhi page pe gye apan to ab chahte h ki jaise hi page load ho to use 2 sec baad koi pop up dikhai de
+
+    // const setTimeoutAPI = setTimeout( () => {
+    //     const changeHeading = document.querySelector('.heading')
+    //     changeHeading.innerHTML = "This is a setTimeout API"
+    // }, 2000)
+
+                        // OR
+
+    /*
+    function changeHeadingText() {
+        const changeHeading = document.querySelector('.heading')
+        changeHeading.innerHTML = "This is a setTimeout API"
+    }
+
+    const setTimeoutAPI = setTimeout(changeHeadingText, 2000)
+    */
+
+    //////// clearTimeout() => iska use setTimeout ko hone se rokna h. Agar apan ko setTimeout chalne se rokna h to iska use krenge.
+    //  Jaise apan ko button pe click hote hi setTimeout ko execute hone se rokna h to uspe eventlistener laga k kr liya page refresh hote
+    //  hi button pe click kr denge.
+
+    document.querySelector('.stopbutton').addEventListener('click', () => {
+        clearTimeout(setTimeoutAPI)
+    })
+
+    
+    ////// startinterval button pe click krne pe shuru ho jaaye and stopinterval button pe click krne pe ruk jaaye
+    let settinginterval
+    document.querySelector('.startinterval').addEventListener('click', () => {
+            settinginterval = setInterval( () => {
+            const newElement = document.createElement('div')
+            const newNode = document.createTextNode("This is a setInterval API")
+            newElement.appendChild(newNode)
+            document.body.appendChild(newElement)
+        }, 2000)
+    })
+
+    document.querySelector('.stopinterval').addEventListener('click', () => {
+        clearInterval(settinginterval)
+    })
+
+</script>
+</html>
