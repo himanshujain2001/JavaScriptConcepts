@@ -53,3 +53,15 @@ console.log(Math.floor(Math.random()*10) + 1); // Number value aayegi and > 1 aa
 const min = 1
 const max = 6
 console.log(Math.floor(Math.random() * (max-min+1)) + min); // isse values 1 se 6 k beech m aayegi
+
+let a = "Z"+"A"+"22"
+console.log(a); // ZA22 - isme ZA concatenate ho jaayenge kyu ki + h to string concat ki tarah chalega
+
+let b = "Z"-"A"+"22"
+console.log(b); // NaN22 - isme - h to JavaScript dono string ko number m convert krne ka try krega lekin vo hoga nhi to NaN aayega
+
+let c = "2"-"1"+"22"
+console.log(c); // 122 - yha 2 aur 1 number m convert ho jaayenge
+
+const d = "Hello"
+console.log(d.indexOf('h')); // -1
